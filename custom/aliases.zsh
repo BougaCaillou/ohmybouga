@@ -1,17 +1,20 @@
 # Search for alias
 function sfa () {
+  # if no argument, search all aliases
+  if [[ $# -eq 0 ]]; then
+    compgen -a | alias | less
+    return 0
+  fi
+
   compgen -a | alias | rg "$1" | less
 }
-alias sfaa="compgen -a | alias | less"
 
 # Custom aliases (outside zsh plugin)
 alias lks="links"
-alias synapse-tag="cat ~/synapse-tags"
 alias kx="kubectx"
 alias wm="whatmake"
 alias majd="gcd && gl && gco -"
 alias chrome="open $1 -a \"Google Chrome\""
-alias configmapdiff="bash ~/Documents/diff-configmap.sh $1 $2"
 alias mtrmg="mtr mongo"
 alias py="python3"
 alias b="bastion"
@@ -20,29 +23,6 @@ alias vi="nvim"
 alias v="vi ."
 alias cheh="python3 -m webbrowser https://www.youtube.com/watch\?v\=9M2Ce50Hle8"
 alias su="python3 -m webbrowser https://www.youtube.com/shorts/FiPDKHLdCyE"
-
-# Synapse functions
-
-# Switch nvim config
-nvim-switch () {
-  if [[ $# -ne 1 ]]; then
-    echo "USAGE: nvim-switch <config>"
-    return 1
-  fi
-
-  if [[ $1 == "bouga" ]]; then
-    rm -r ~/.config/nvim
-    mkdir -p ~/.config/nvim
-    cp -r ~/.config/nvim-bouga/* ~/.config/nvim/
-  elif [[ $1 == "nvchad" ]]; then
-    rm -r ~/.config/nvim
-    mkdir -p ~/.config/nvim
-    cp -r ~/.config/nvim-nvchad/* ~/.config/nvim/
-  else
-    echo "Unknown config '$1'"
-    return 2
-  fi
-}
 
 path() {
 	echo $PATH | tr ':' '\n'
@@ -55,10 +35,6 @@ yl () {
   else
     yarn link "@synapse-medicine/$1"
   fi
-}
-
-tejreact () {
-  rm -rf packages/$1/node_modules/react/
 }
 
 pgcl () {

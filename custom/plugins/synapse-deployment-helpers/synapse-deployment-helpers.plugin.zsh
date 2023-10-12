@@ -87,27 +87,6 @@ mpbt () {
   make build-test
 }
 
-# Kubectl get pods, greps something
-greppod() {
-  if [[ $# -ne 1 ]]; then
-    echo "Usage: greppod NAME"
-    return 1
-  fi
-
-  kubectl get pods | grep $1
-}
-
-# Kubectl get deployments, jsonpath magic, and greps something (a docker image name)
-# Useful to see exactly the running version of some project
-grepimage () {
-  if [[ $# -ne 1 ]]; then
-    echo "Usage: grepimage NAME"
-    return 1
-  fi
-
-  kubectl get deployments -o wide | awk '{ print $1" (running for "$5"): "$7 }' | grep $1
-}
-
 # Copies a chatops message to start a Synapse project build with branch and version number
 # Exemple:
 # "/gitlab ci run tag Synapse develop 1.22.4"

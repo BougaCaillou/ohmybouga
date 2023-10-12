@@ -1,5 +1,6 @@
-# custom files
-custom/
+# custom files that should be ignored
+# DO NOT remove the next line, as it would result in pushing a file full of api keys and secrets O_o
+custom/env-secret.zsh
 
 # temp files directories
 cache/

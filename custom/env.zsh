@@ -45,7 +45,7 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-# Widget demo page (to run local bundle from localhost)
+# Widget demo page
 export PUBLIC_SYNAPSE_WIDGET_URL=http://localhost:8080
 
 # User management env var
@@ -61,7 +61,7 @@ export JAVA_ROOT=/Library/Java/JavaVirtualMachines
 export JAVA_HOME="$JAVA_ROOT/jdk-8.jdk/Contents/Home"
 PATH="$JAVA_HOME:$PATH"
 
-# libpq (supposedly postgres dump utilities)
+# libpq (postgre dump  and restore utilities)
 PATH="/usr/local/opt/libpq/bin:$PATH"
 
 # Postgresql env vars
@@ -76,7 +76,7 @@ PATH="$HOME/custom-tools:$PATH"
 # kubernetes-tooling bin
 PATH="$HOME/Documents/kubernetes-tooling/bin:$PATH"
 
-# Local bin directory (useful for lunar vim)
+# Local bin directory
 PATH="$HOME/.local/bin:$PATH"
 
 export PATH;

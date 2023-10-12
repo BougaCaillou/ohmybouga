@@ -1,11 +1,6 @@
 #!/bin/zsh
 
-# Commands related to git (git branches, commits, current repository etc...)
-
-# Show git current branch
-gcurb () {
-  git branch | grep '^\*.*' | cut -c 3-
-}
+# Commands related to git
 
 # Copies the git currrent branch in your clipboard
 gccb() {

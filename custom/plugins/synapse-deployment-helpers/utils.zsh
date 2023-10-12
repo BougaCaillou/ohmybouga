@@ -32,6 +32,8 @@ links() {
 
 # Helps quickly see make commands
 # Takes 1 argument
+# If no argument is given, it will output every command in the Makefile
+# Also probably broken, due to the way Makefiles can be formatted
 whatmake() {
   # No arguments means we want all command in the Makefile, we just need to output every first word of lines starting like "something:"
   if [[ ! -n $1 ]]; then

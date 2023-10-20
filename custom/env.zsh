@@ -79,4 +79,7 @@ PATH="$HOME/Documents/kubernetes-tooling/bin:$PATH"
 # Local bin directory
 PATH="$HOME/.local/bin:$PATH"
 
+# Trying out WezTerm
+PATH="/Applications/WezTerm.app/Contents/MacOS:$PATH"
+
 export PATH;

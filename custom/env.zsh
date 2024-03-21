@@ -75,11 +75,15 @@ PATH="$HOME/custom-tools:$PATH"
 
 # kubernetes-tooling bin
 PATH="$HOME/Documents/kubernetes-tooling/bin:$PATH"
+PATH="$HOME/Documents/kubernetes-tooling/user-auth:$PATH"
 
 # Local bin directory
 PATH="$HOME/.local/bin:$PATH"
 
 # Trying out WezTerm
 PATH="/Applications/WezTerm.app/Contents/MacOS:$PATH"
+
+# TMUX session paths. Session are defined as shell scripts
+export TMUX_SESSIONS_PATH="$HOME/.config/tmux-bouga"
 
 export PATH;

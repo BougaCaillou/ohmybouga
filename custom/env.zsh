@@ -84,6 +84,6 @@ PATH="$HOME/.local/bin:$PATH"
 PATH="/Applications/WezTerm.app/Contents/MacOS:$PATH"
 
 # TMUX session paths. Session are defined as shell scripts
-export TMUX_SESSIONS_PATH="$HOME/.config/tmux-bouga"
+export TMUX_SESSIONS_PATH="$HOME/.config/tmux-bouga/sessions"
 
 export PATH;

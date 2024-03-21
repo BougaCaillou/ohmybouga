@@ -28,7 +28,7 @@ alias hfd="helmfile diff"
 alias hfa="helmfile apply"
 alias cl="curlie"
 alias make="gmake"
-alias ta="zsh $SESSIONS_PATH/ta.sh"
+alias ta="zsh $TMUX_SESSIONS_PATH/ta.sh"
 
 # conventional commits reminder
 alias cc="echo \"feat: A new feature

@@ -28,7 +28,6 @@ alias hfd="helmfile diff"
 alias hfa="helmfile apply"
 alias cl="curlie"
 alias make="gmake"
-alias ta="zsh $TMUX_SESSIONS_PATH/ta.sh"
 
 # conventional commits reminder
 alias cc="echo \"feat: A new feature
@@ -41,6 +40,10 @@ test: Adding missing tests or correcting existing tests
 chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
 ci: Changes to our CI configuration files and scripts
 build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)\""
+
+ta () {
+  zsh "$TMUX_SESSIONS_PATH/ta.sh"
+}
 
 # Outputs the path variables in an line by line format
 path() {

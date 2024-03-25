@@ -86,4 +86,7 @@ PATH="/Applications/WezTerm.app/Contents/MacOS:$PATH"
 # TMUX session paths. Session are defined as shell scripts
 export TMUX_SESSIONS_PATH="$HOME/.config/tmux-bouga/sessions"
 
+# Main projects directory (where all the projects are cloned)
+export PROJECTS_DIR="$HOME/Documents"
+
 export PATH;

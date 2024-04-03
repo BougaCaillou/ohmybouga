@@ -18,7 +18,6 @@ alias chrome="open $1 -a \"Google Chrome\""
 alias mtrmg="mtr mongo"
 alias py="python3"
 alias b="bastion"
-alias k9s="k9s -n default"
 alias vi="nvim"
 alias v="vi ."
 alias cheh="python3 -m webbrowser https://www.youtube.com/watch\?v\=9M2Ce50Hle8"
@@ -28,6 +27,8 @@ alias hfd="helmfile diff"
 alias hfa="helmfile apply"
 alias cl="curlie"
 alias make="gmake"
+alias ls='eza -lh --git --icons --no-user'
+alias ez='exec zsh'
 
 # conventional commits reminder
 alias cc="echo \"feat: A new feature
@@ -106,9 +107,6 @@ psqlt () {
 week () {
   date +%V
 }
-
-# Exa
-alias ls='exa -lh --git --icons --no-user'
 
 # TheFuck
 #eval "$(thefuck --alias)"

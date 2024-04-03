@@ -7,8 +7,15 @@
 #
 # - Probably requires a terminal with custom fonts installed
 # - Check out some guides like this one (mac os based) : https://towardsdatascience.com/the-ultimate-guide-to-your-terminal-makeover-e11f9b87ac99
+# - ... or i don't know, check out Wezterm, it's pretty cool : https://wezfurlong.org/wezterm/
 #
 # - Look for available colors by typing "spectrum_ls" in your terminal
+###
+
+###
+# Note, as of 2024-04-03:
+# I no longer use this theme as i switchted to Pure prompt : https://github.com/sindresorhus/pure
+# That being said, this theme is still usable.
 ###
 
 ###
@@ -65,7 +72,7 @@ declare -A wack=( \
 
 declare -A THEME
 
-for key value in  "${(@kv)main}"; do
+for key value in "${(@kv)main}"; do
   THEME["$key"]=$value
 done
 

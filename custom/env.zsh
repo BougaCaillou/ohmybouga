@@ -58,8 +58,6 @@ PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/tools:$ANDROID_HOME/t
 
 # Java home
 export JAVA_ROOT=/Library/Java/JavaVirtualMachines
-export JAVA_HOME="$JAVA_ROOT/jdk-8.jdk/Contents/Home"
-PATH="$JAVA_HOME:$PATH"
 
 # libpq (postgre dump  and restore utilities)
 PATH="/usr/local/opt/libpq/bin:$PATH"

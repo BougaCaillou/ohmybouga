@@ -1,14 +1,3 @@
-# Search for alias
-function sfa () {
-  # if no argument, search all aliases
-  if [[ $# -eq 0 ]]; then
-    compgen -a | alias | less
-    return 0
-  fi
-
-  compgen -a | alias | rg "$1" | less
-}
-
 # Custom aliases (outside zsh plugin)
 alias lks="links"
 alias kx="kubectx"
@@ -42,8 +31,14 @@ chore: Changes to the build process or auxiliary tools and libraries such as doc
 ci: Changes to our CI configuration files and scripts
 build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)\""
 
+# TMUX smart attach
 ta () {
   zsh "$TMUX_SESSIONS_PATH/ta.sh"
+}
+
+# git checkout search
+gcos () {
+  g checkout $(git for-each-ref --format='%(refname:short)' refs/heads/ | gum filter --placeholder="Choose a branch...")
 }
 
 # Outputs the path variables in an line by line format
@@ -107,10 +102,6 @@ psqlt () {
 week () {
   date +%V
 }
-
-# TheFuck
-#eval "$(thefuck --alias)"
-alias fuck='fuck --yeah'
 
 # Zoxide
 eval "$(zoxide init zsh)"
